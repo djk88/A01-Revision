@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Sign Up Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+
+<body>
+  <main>
+    <section class="form-container">
+      <div class="form">
+        <h2>Signup</h2>
+        <form action="#" method="post">
+          <fieldset>
+            <legend>
+              <span class="legend-num">1</span></span>Account Info
+            </legend>
+            <label for="name" class="visually-hidden">Name:</label>
+            <input type="text" name="name" id="name" required pattern="[a-zA-Z0-9]+"
+              title="name can only contain alpha-numeric characters"
+              aria-label="enter your full name containing only alpha-numeric characters" placeholder="Full Name...">
+            <label for="email" class="visually-hidden">Email</label>
+            <input type="email" name="email" id="email" required
+              pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+              aria-label="enter in your email address" placeholder="Email Addres...">
+            <label for="password" class="visually-hidden">Password</label>
+            <input type="password" name="password" id="password" required placeholder="Password...min 8 chars"
+              aria-label="enter in your password. min 8 characters">
+          </fieldset>
+          <fieldset class="programming-languages">
+            <legend><span class="legend-num">2</span>Dev Skills</legend>
+            <label class="standalone">Programming Languages</label>
+            <div class="prog-row">
+              <div class="check-container">
+                <input type="checkbox" name="html" id="html" value="html" aria-label="html checkbox">
+                <label for="html">HTML</label>
+              </div>
+              <div class="check-container">
+                <input type="checkbox" name="css" id="css" value="css" aria-label="css checkbox">
+                <label for="css">CSS</label>
+              </div>
+              <div class="check-container">
+                <input type="checkbox" name="js" id="js" value="js" aria-label="javascript checkbox">
+                <label for="js">JavaScript</label>
+              </div>
+            </div>
+            <div class="prog-row">
+              <div class="check-container">
+                <input type="checkbox" name="php" id="php" value="php" aria-label="php checkbox">
+                <label for="php">PHP</label>
+              </div>
+              <div class="check-container">
+                <input type="checkbox" name="sass" id="sass" value="sass" aria-label="sass checkbox">
+                <label for="sass">SASS</label>
+              </div>
+              <div class="check-container">
+                <input type="checkbox" name="python" id="python" value="python" aria-label="python checkbox">
+                <label for="python">Python</label>
+              </div>
+            </div>
+            <label class="standalone">Dev Ops</label>
+            <div class="dev-row">
+              <div class="check-container">
+                <input type="checkbox" name="git" id="git" value="git" aria-label="git checkbox">
+                <label for="git">GIT</label>
+              </div>
+              <div class="check-container">
+                <input type="checkbox" name="gulp" id="gulp" value="gulp" aria-label="gulp checkbox">
+                <label for="gulp">Gulp</label>
+              </div>
+              <div class="check-container">
+                <input type="checkbox" name="webpack" id="webpack" value="webpack" aria-label="webpack checkbox">
+                <label for="webpack">Webpack</label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend><span class="legend-num">3</span>Experience</legend>
+            <input type="radio" name="experience" id="beginner" value="beginner">
+            <label for="beginner">Beginner</label>
+            <input type="radio" name="experience" id="intermediate" value="intermediate">
+            <label for="intermediate">Intermediate</label>
+            <input type="radio" name="experience" id="advanced" value="advanced">
+            <label for="advanced">Advanced</label>
+          </fieldset>
+          <fieldset>
+            <legend><span class="legend-num">4</span>Other</legend>
+            <label for="referredby">How did you hear about us?</label>
+            <select name="referredby" id="referredby">
+              <option value="" class="option">Please Select...</option>
+              <optgroup label="Person">
+                <option value="friend" class="option">Friend</option>
+                <option value="family" class="option">Family</option>
+                <option value="colleague" class="option">Colleague</option>
+              </optgroup>
+              <optgroup label="Media">
+                <option value="internet" class="option">Internet</option>
+                <option value="radio" class="option">Radio</option>
+                <option value="tv" class="option">TV</option>
+                <option value="newpaper" class="option">Newspaper</option>
+              </optgroup>
+              <optgroup label="Other">
+                <option value="magic" class="option">Magic!</option>
+                <option value="magic" class="option">Other...</option>
+              </optgroup>
+            </select>
+            <div id="more-detail" class="hidden">
+              <label for="Other">Details, please...</label>
+              <input name="more-detail-comments" id="more-detail-comments" placeholder="Do tell!!" cols="40"
+                rows="6"></input>
+            </div>
+            <label for="comments">Comments</label>
+            <textarea name="comments" id="comments" cols="40" rows="6" class="comment-textarea"></textarea>
+          </fieldset>
+          <input type="hidden" name="userid" value="jbsolo">
+          <input type="submit" value="Submit">
+          <input type="reset" value="Clear Form">
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2022 David Kim</p>
+  </footer>
+  <script src="./scripts/scripts.js"></script>
+  <!--  
+
+*** Form should have a max-width of
+480px and should be centred along
+the left / right axis within the
+browser
+
+Form should post data to #
+
+Select Menu Values
+
+Person
+  Friend
+  Family
+  Colleague
+
+Media
+  Internet
+  Radio
+  TV
+  Newspaper
+Other
+  Magic!
+  Other...
+-->
+</body>
+
+</html>

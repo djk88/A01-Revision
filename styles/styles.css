@@ -1,0 +1,262 @@
+@charset "utf-8";
+
+/* *** Form should have a max-width of
+480px and should be centred along
+the left / right axis within the
+browser
+
+Form should post data to # */
+
+/* Box Sizing Reset */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+:root {
+  --inputBackground: #e5ebed;
+  --accentColor: #153562;
+  --inputAccent: #f8ba44;
+}
+
+body {
+  min-height: 125vh;
+  min-width: 400px;
+  background: linear-gradient(to bottom, #f8ba44 0%, #f82b16 100%);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin-bottom: 5rem;
+}
+
+.form-container {
+  position: relative;
+  min-width: 400px;
+  max-width: 480px;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  background: white;
+  border-radius: 1em;
+  box-shadow: 5px 25px 50px rgb(0 0 0 / 80%), 10px 10px 8px rgb(0 0 0 / 30%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 5rem;
+}
+
+.form {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+}
+
+.form h2 {
+  position: relative;
+  color: #152763;
+  font-size: 2em;
+  font-weight: 900;
+  text-shadow: 1px 2px 4px #888;
+  margin-bottom: 1em;
+}
+
+.form h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 3em;
+  height: 0.1em;
+  background: #152763;
+  box-shadow: 1px 2px 4px #CCC;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  background: var(--inputBackground);
+  outline: none;
+  padding: 8px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  font-size: 16px;
+  color: #888;
+  margin-top: 5px;
+}
+
+.form .comment-textarea {
+  margin-top: 0;
+}
+
+.form input:focus,
+.form textarea:focus {
+  background: white;
+  border: 3px solid var(--inputAccent);
+}
+
+
+.form input::placeholder {
+  color: #888;
+  opacity: 1;
+}
+
+.form input[type="submit"] {
+  background: var(--accentColor);
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 12px 10px;
+  margin-top: 5px;
+}
+
+.form input[type="reset"] {
+  margin-top: 30px;
+  background: transparent;
+  border: 2px solid var(--inputBackground);
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 5px;
+  color: red;
+  padding: 12px 10px;
+  font-size: 18px;
+}
+
+.form label {
+  display: block;
+  /* font-weight: normal; */
+  margin-top: 0.6rem;
+}
+
+
+fieldset {
+  border: none;
+  border-top: 0.1rem solid black;
+  margin-top: 1.5rem;
+}
+
+legend {
+  margin-left: 1rem;
+  padding: .5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  position: relative;
+  text-shadow: rgb(0, 0, 0) 1px 0px 0px;
+}
+
+.legend-num {
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  background: var(--accentColor);
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  display: inline-block;
+  position: relative;
+  line-height: 2.3rem;
+  text-shadow: none;
+  font-weight: bold;
+}
+
+
+footer {
+  position: fixed;
+  bottom: 0rem;
+  width: 100%;
+  text-align: right;
+  font-size: .8rem;
+  padding: 0.6rem;
+  background: transparent;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  display: inline-block;
+  width: fit-content;
+}
+
+input[type='checkbox']+label,
+input[type='radio']+label {
+  display: inline-block;
+  width: fit-content;
+  margin-right: 2rem;
+}
+
+
+.hidden {
+  display: none;
+}
+
+select {
+  width: 100%;
+  background-color: var(--inputBackground);
+  padding: 8px 10px;
+  border-radius: 3px;
+  color: gray;
+  outline: 0;
+  border: none;
+}
+
+select .option {
+  color: black;
+  font-weight: bold;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+
+.standalone {
+  font-weight: bold;
+}
+
+.prog-row {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+
+.dev-row {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+
+.check-container {
+  width: 150px;
+}
+
+#beginner {
+  margin-left: 10px
+}
